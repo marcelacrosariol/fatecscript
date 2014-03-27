@@ -5,4 +5,4 @@ from tekton import router
 
 
 def index(_write_tmpl):
-    _write_tmpl('templates/base.html')
+    _write_tmpl('templates/index.html')

@@ -5,4 +5,9 @@ from tekton import router
 
 
 def index(_write_tmpl):
-    _write_tmpl('templates/index.html')
+    url = router.to_path(my_form)
+    _write_tmpl('/templates/index.html', {'form_url': url})
+
+def params(_resp, *args, **kwargs):
+    _resp.write(args)
+    _resp.write(kwargs)

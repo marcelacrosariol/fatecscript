@@ -24,9 +24,6 @@ libraries:
   version: "0.6c11"
 
 handlers:
-- url: /
-  script: convention.app
-
 - url: /(.*)static(.*)
   static_files: web/\1static\2
   upload: web/.*static.*

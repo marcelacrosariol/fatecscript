@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Share a Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../static/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/static/img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html"><img src="img/logoshareabook.png"  style='MARGIN:0px 0px,width:220px;height:20px'></a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="comofunciona.html">Como Funciona</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meu Perfil<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="minhaestante.html">Minha Estante</a>
+								</li>
+								<li>
+									<a href="trocas.html">Minhas Trocas</a>
+								</li>
+								<li>
+									<a href="mensagens.html">Mensagens</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="cadastrolivro.html">Cadastrar Livro Disponível</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+						<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> <button type="submit" class="btn btn-default">Buscar</button>
+					</form>
+						</li>
+						<li class="active">
+							<a href="cadastro.html" >Cadastrar</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+									<label>E-mail</label>
+									<input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
+									<label>Senha</label>
+									<input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
+									<input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+									<label class="string optional" for="user_remember_me"> Remember me</label>
+ 
+									<input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+								</form>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+		
+		<div class="formu">
+			<form class="form-horizontal">
+				<fieldset>
+					<!-- Form Name -->
+					<legend>Cadastro</legend>
+
+					<!-- File Button --> 
+					<div class="control-group">
+						<label class="control-label" for="foto">Foto de Perfil:</label>
+						<div class="controls">
+							<input id="foto" name="foto" class="input-file" type="file">
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="control-group">
+						  <label class="control-label" for="nome">Nome:</label>
+						  <input id="nome" name="nome" type="text" placeholder="nome" class="input-xlarge" required="">
+						  
+						  <label class="control-label" for="sobrenome">Sobrenome:</label>
+						  <input id="sobrenome" name="sobrenome" type="text" placeholder="sobrenome" class="input-xlarge">
+					</div>
+
+					<!-- Multiple Radios -->
+					<div class="control-group">
+						<label class="control-label" for="genero">Gênero</label>
+					<div class="controls">
+						<label class="radio" for="genero-0">
+						<input type="radio" name="genero" id="genero-0" value="Masculino" checked="checked">
+							Masculino
+						</label>
+						<label class="radio" for="genero-1">
+						<input type="radio" name="genero" id="genero-1" value="Feminino">
+						Feminino
+						</label>
+					</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="control-group">
+						<label class="control-label" for="email">E-mail:</label>
+							<input id="email" name="email" type="text" placeholder="placeholder" class="input-xlarge" required="">
+					</div>
+
+					<!-- Password input-->
+					<div class="control-group">
+						<label class="control-label" for="senha">Senha:</label>
+						<input id="senha" name="senha" type="password" placeholder="placeholder" class="input-xlarge" required="">
+					</div>
+		
+
+					<!-- Select Basic -->
+				
+				<div class="control-group">
+					<label class="control-label" for="dia">Dia:</label>
+					<select id="dia" name="dia" class="input-mini">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
+						<option>15</option>
+						<option>16</option>
+						<option>17</option>
+						<option>18</option>
+						<option>19</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+						<option>24</option>
+						<option>25</option>
+						<option>26</option>
+						<option>27</option>
+						<option>28</option>
+						<option>29</option>
+						<option>30</option>
+						<option>21</option>
+				</select>
+	
+	<label class="control-label" for="mes">Mês:</label>
+	<select id="mes" name="mes" class="input-mini">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+    </select>
+	
+	<label class="control-label" for="ano">Ano:</label>
+	
+	 <select id="ano" name="ano" class="input-small">
+      <option>1970</option>
+      <option>1971</option>
+      <option>1972</option>
+      <option>1973</option>
+      <option>1974</option>
+      <option>1975</option>
+      <option>1976</option>
+      <option>1977</option>
+      <option>1978</option>
+      <option>1979</option>
+      <option>1980</option>
+      <option>1981</option>
+      <option>1982</option>
+      <option>1983</option>
+      <option>1984</option>
+      <option>1985</option>
+      <option>1986</option>
+      <option>1987</option>
+      <option>1988</option>
+      <option>1989</option>
+      <option>1990</option>
+      <option>1991</option>
+      <option>1992</option>
+      <option>1993</option>
+      <option>1994</option>
+      <option>1995</option>
+      <option>1996</option>
+    </select>
+</div>
+
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="rua">Rua:</label>
+    <input id="rua" name="rua" type="text" placeholder="placeholder" class="input-xlarge">
+  
+  <label class="control-label" for="bairro">Bairro:</label>
+  <input id="bairro" name="bairro" type="text" placeholder="placeholder" class="input-xlarge" required="">
+	
+	
+</div>
+<!-- Text input-->
+<div class="control-group">
+<label class="control-label" for="numero">Número:</label>
+      <input id="numero" name="numero" type="text" placeholder="placeholder" class="input-mini" required="">
+  <label class="control-label" for="complemento">Complemento:</label>
+    <input id="complemento" name="complemento" type="text" placeholder="placeholder" class="input-large">
+  
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="cep">CEP:</label>
+    <input id="cep" name="cep" type="text" placeholder="placeholder" class="input-xlarge" required="">
+	<label class="control-label" for="estado">Estado:</label>
+   <input id="estado" name="estado" type="text" placeholder="placeholder" class="input-xlarge">
+   <label class="control-label" for="pais">País:</label>
+   <input id="pais" name="pais" type="text" placeholder="placeholder" class="input-xlarge" required="">
+</div>
+
+<div class="control-group">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Enviar</button>
+  </div>
+
+  
+</fieldset>
+</form>
+
+		</div>
+	</div>
+	<div class="row clearfix">
+			<div class="col-md-12 column">
+				<footer class="footer">
+					<div class="column-footer" >
+							<h5>	Navegaç&atildeo </h5>
+	                   		<a href='index.html' title='Home'>Home</a> <br>
+	                   		<a href='perfil.html' title='Meu Perfil'>Meu Perfil</a><br>
+	                   		<a href='minhaestante.html' title='Minha Estante'>Minha Estante</a><br>
+	                   		<a href='cadastro.html' title='Cadastrar'>Cadastrar</a><br>
+					</div>
+					<div class="column-footer">
+							<h5>	Informações </h5>
+							<a href='sobre.html' title='Sobre a P&aacutegina'>Sobre a P&aacutegina </a> <br>
+							<a href='comofunciona.html' title='Como Funciona'>Como Funciona</a><br>
+	                   		<a href='termos.html' title='Termos de Uso'>Termos de Uso</a><br>
+	                   		<a href='faleconosco.html' title='Fale Conosco'>Fale Conosco</a> <br>
+					</div>
+					<div class="column-footer-social">
+					Confira também nossas redes sociais:  &nbsp  
+						<img alt="Facebook" src="../static/img/icon/face.png" class="img-circle">
+						<img alt="Twitter" src="img/icon/twitter.png" class="img-circle">
+						<img alt="Instagram" src="img/icon/instagram.png" class="img-circle">
+						<img alt="Tumblr" src="img/icon/tumblr.png" class="img-circle">
+					</div>
+				</footer>
+			</div>
+	</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

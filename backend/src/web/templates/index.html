@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Share a Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/static/img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="/"><img src="/static/img/logoshareabook.png"  style='MARGIN:0px 0px,width:220px;height:20px'></a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/comofunciona">Como Funciona</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meu Perfil<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/minhaestante">Minha Estante</a>
+								</li>
+								<li>
+									<a href="/trocas">Minhas Trocas</a>
+								</li>
+								<li>
+									<a href="/mensagens">Mensagens</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="/cadastrolivro">Cadastrar Livro Disponível</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+						<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> <button type="submit" class="btn btn-default">Buscar</button>
+					</form>
+						</li>
+						<li>
+							<a href="/cadastro">Cadastrar</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+									<label>E-mail</label>
+									<input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
+									<label>Senha</label>
+									<input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
+									<input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+									<label class="string optional" for="user_remember_me"> Remember me</label>
+ 
+									<input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+								</form>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+
+            {% block conteudo %}
+			<div class='jumbotron' style="text-indent: 2em">
+				<center><img src="/static/img/logojumbo.png"></center><br>
+				<p style="text-align:justity">Este é um projeto sem fins lucrativos e tem como principal objetivo permitir a fácil troca de livro entre os usuários. 
+				</p>
+				<blockquote>O livro só é livro se há um leitor atrás dele. Livro precisa ser lido. Lido e relido. Um livro, se pode ser lido por muitas pessoas, então por que 
+				trancafiá-lo numa estante para nunca mais? <br>-Rogers Silva</blockquote> 
+				
+				<center><a  href="/cadastro">Cadastre-se!</a></center>
+				</div>
+			<div class="row">
+				<div class="col-md-4" >
+					<div class="thumbnail" >
+						<img alt="300x200" src="/static/img/book1.png" >
+						<div class="caption">
+							<h3>
+								Começando
+							</h3>
+							<p>
+								Veja como trocar livros de forma rápida e simples. Não deixe-os juntando poeira na sua estante!
+							</p>
+							<p>
+								<a class="btn btn-primary" href="/comofunciona">Saiba mais</a>
+							</p>	
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="300x200" src="/static/img/envelope.png">
+						<div class="caption">
+							<h3>
+								Sugestões
+							</h3>
+							<p>
+								Ajude-nos a melhorar cada vez mais esta plataforma. Envie suas sugestões ou dúvidas.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="/faleconosco">Saiba mais</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="300x200" src="/static/img/book3.png">
+						<div class="caption">
+							<h3>
+								Termos de Uso
+							</h3>
+							<p>
+								Confira os termos de uso do Share a Book. Realize suas trocas de forma segura e simples.  
+							</p>
+							<p>
+								<a class="btn btn-primary" href="/termos">Saiba mais</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {%endbloq%}
+	<div class="row clearfix">
+			<div class="col-md-12 column">
+					<footer class="footer">
+					<div class="column-footer" >
+							<h5>	Navegaç&atildeo </h5>
+	                   		<a href='/' title='Home'>Home</a> <br>
+	                   		<a href='/perfil' title='Meu Perfil'>Meu Perfil</a><br>
+	                   		<a href='/minhaestantel' title='Minha Estante'>Minha Estante</a><br>
+	                   		<a href='/cadastro' title='Cadastrar'>Cadastrar</a><br>
+					</div>
+					<div class="column-footer">
+							<h5>	Informações </h5>
+							<a href='/sobre.html' title='Sobre a P&aacutegina'>Sobre a P&aacutegina </a> <br>
+							<a href='/comofunciona' title='Como Funciona'>Como Funciona</a><br>
+	                   		<a href='/termos' title='Termos de Uso'>Termos de Uso</a><br>
+	                   		<a href='/faleconosco' title='Fale Conosco'>Fale Conosco</a> <br>
+					</div>
+					<div class="column-footer-social">
+					Confira também nossas redes sociais:  &nbsp  
+						<img alt="Facebook" src="/static/img/icon/face.png" class="img-circle">
+						<img alt="Twitter" src="/static/img/icon/twitter.png" class="img-circle">
+						<img alt="Instagram" src="/static/img/icon/instagram.png" class="img-circle">
+						<img alt="Tumblr" src="/static/img/icon/tumblr.png" class="img-circle">
+					</div>
+				</footer>
+			</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>
